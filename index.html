@@ -1,42 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mahmoud Mamdouh | Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { background: #222; color: #fff; padding: 20px; text-align: center; }
-    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    section { padding: 40px; max-width: 800px; margin: auto; }
-    h2 { color: #333; }
-    footer { background: #222; color: #fff; text-align: center; padding: 20px; margin-top: 40px; }
+    /* Reset & Fonts */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; background: #f5f7fa; color: #333; }
+
+    /* Header */
+    header { background: linear-gradient(135deg, #1d3557, #457b9d); color: white; padding: 60px 20px; text-align: center; }
+    header h1 { font-size: 2.8rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; opacity: 0.9; }
+
+    /* Navigation */
+    nav { background: #1d3557; display: flex; justify-content: center; padding: 15px; position: sticky; top: 0; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+    nav a:hover { color: #f1faee; }
+
+    /* Sections */
+    section { max-width: 1000px; margin: 50px auto; padding: 0 20px; }
+    h2 { margin-bottom: 20px; color: #1d3557; border-left: 5px solid #457b9d; padding-left: 10px; }
+
+    /* About */
+    #about p { font-size: 1.1rem; }
+
+    /* Projects */
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .project-card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: transform 0.2s; }
+    .project-card:hover { transform: translateY(-5px); }
+    .project-card h3 { margin-bottom: 10px; color: #457b9d; }
+
+    /* Contact */
+    #contact a { color: #1d3557; text-decoration: none; font-weight: bold; }
+    #contact a:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer { background: #1d3557; color: white; text-align: center; padding: 20px; margin-top: 50px; }
   </style>
 </head>
 <body>
+
+  <!-- Hero -->
   <header>
     <h1>Mahmoud Mamdouh</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <p>Computer Science Student • CUDA & oneAPI Enthusiast • Audio & Image Processing Researcher</p>
   </header>
 
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About -->
   <section id="about">
     <h2>About Me</h2>
-    <p>Hello! I'm Mahmoud, a Computer Science student passionate about parallel programming, CUDA, and building cool projects. 🚀</p>
+    <p>Hi, I’m Mahmoud 👋. I love solving tough problems with parallel programming, CUDA, and Intel oneAPI. My current research is about enhancing audio and images using cutting-edge techniques like super-resolution and deepfake analysis. I enjoy building projects that push technology forward 🚀.</p>
   </section>
 
+  <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
-    <ul>
-      <li><strong>Audio Enhancement with CUDA & oneAPI</strong> – Accelerating noise removal in audio signals.</li>
-      <li><strong>Deepfake Audio Research</strong> – Exploring advanced detection & generation techniques.</li>
-      <li><strong>Image Super-Resolution</strong> – Machine learning + advanced AI approaches for clearer images.</li>
-    </ul>
+    <div class="projects">
+      <div class="project-card">
+        <h3>🎵 Audio Enhancement</h3>
+        <p>Accelerating noise removal with CUDA & oneAPI for real-time performance.</p>
+      </div>
+      <div class="project-card">
+        <h3>🧠 Deepfake Audio Research</h3>
+        <p>Exploring advanced detection & generation techniques in ultra-realistic audio synthesis.</p>
+      </div>
+      <div class="project-card">
+        <h3>🖼 Image Super-Resolution</h3>
+        <p>Combining classical ML and advanced AI approaches to upscale images with high fidelity.</p>
+      </div>
+    </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:mahmoud@example.com">mahmoud@example.com</a></p>
@@ -44,8 +88,10 @@
     <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Mahmoud Mamdouh. All rights reserved.</p>
+    <p>© 2025 Mahmoud Mamdouh. Built with ❤️ on GitHub Pages.</p>
   </footer>
+
 </body>
 </html>
