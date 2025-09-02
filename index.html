@@ -43,7 +43,6 @@
             background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #1e1e1e 100%);
         }
 
-        /* Subtle accent elements */
         .bg-accent {
             position: fixed;
             top: 0;
@@ -193,8 +192,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            background-size: 200% 200%;
-            animation: gradientText 3s ease-in-out infinite;
         }
 
         .hero .subtitle {
@@ -209,11 +206,6 @@
             margin-bottom: 3rem;
             opacity: 0.9;
             animation: fadeInUp 1s ease 1s both;
-        }
-
-        @keyframes gradientText {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
         }
 
         @keyframes fadeInUp {
@@ -255,7 +247,7 @@
         }
 
         .glass-card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-5px);
             border-color: var(--primary-color);
             box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
         }
@@ -358,9 +350,9 @@
         }
 
         .skill-category:hover {
-            transform: translateY(-5px) scale(1.02);
+            transform: translateY(-5px);
             border-color: var(--primary-color);
-            box-shadow: 0 15px 30px rgba(0, 255, 255, 0.15);
+            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
         }
 
         .skill-category h3 {
@@ -416,14 +408,12 @@
             right: 0;
             height: 4px;
             background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-            background-size: 200% 200%;
-            animation: gradientShift 3s ease-in-out infinite;
         }
 
         .project-card:hover {
             transform: translateY(-3px);
             border-color: var(--primary-color);
-            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.15);
+            box-shadow: 0 8px 16px rgba(255, 107, 53, 0.1);
         }
 
         .project-title {
@@ -560,32 +550,27 @@
         .contact-item {
             text-align: center;
             padding: 2rem;
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
+            background: var(--bg-dark);
             border-radius: 15px;
             border: 1px solid var(--glass-border);
             transition: all 0.3s ease;
             color: var(--text-light);
-            text-decoration: none;
         }
 
         .contact-item h3 {
             color: var(--text-light);
             margin-bottom: 0.5rem;
-            font-weight: bold;
         }
 
         .contact-item p {
             color: var(--text-light);
-            word-break: break-word;
-            font-size: 1rem;
-            font-weight: 500;
+            font-size: 0.95rem;
         }
 
         .contact-item:hover {
             transform: translateY(-5px);
             border-color: var(--primary-color);
-            box-shadow: 0 15px 30px rgba(0, 255, 255, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
         }
 
         .contact-icon {
@@ -604,78 +589,6 @@
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        /* Matrix Rain Effect */
-        .matrix-rain {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-            opacity: 0.1;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .experience-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
-            }
-
-            section {
-                padding: 3rem 1rem;
-            }
-        }
-
-        /* Advanced Hover Effects */
-        .morphing-card {
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-        }
-
-        .morphing-card:hover {
-            transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1.02);
-        }
-
-        /* Glowing Elements */
-        .glow {
-            position: relative;
-        }
-
-        .glow::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: inherit;
-            padding: 2px;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask-composite: exclude;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .glow:hover::after {
-            opacity: 1;
         }
 
         /* Floating Action Button */
@@ -728,7 +641,61 @@
             100% { transform: translate(100px, 100px); }
         }
 
-        /* Education Highlight */
+        /* Project Image Placeholders */
+        .project-image-placeholder {
+            width: 100%;
+            height: 200px;
+            background: var(--subtle-accent);
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .project-image-placeholder:hover {
+            border-color: var(--secondary-color);
+            background: rgba(255, 107, 53, 0.05);
+        }
+
+        /* Achievement Image Placeholders */
+        .achievement-image-placeholder {
+            width: 100%;
+            height: 150px;
+            background: var(--subtle-accent);
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed var(--accent-color);
+            transition: all 0.3s ease;
+        }
+
+        .leadership-photo {
+            text-align: center;
+            color: var(--text-gray);
+        }
+
+        .leadership-photo span {
+            display: block;
+            font-size: 1rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .leadership-photo p {
+            font-size: 0.8rem;
+        }
+
+        .achievement-image-placeholder:hover {
+            border-color: var(--primary-color);
+            background: rgba(255, 204, 2, 0.05);
+        }
+
+        /* Education Card */
         .education-card {
             background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
             border: 2px solid var(--primary-color);
@@ -756,7 +723,7 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* Extracurriculars */
+        /* Achievements */
         .achievements {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -792,38 +759,100 @@
             box-shadow: 0 20px 40px rgba(255, 255, 0, 0.2);
         }
 
-        .achievement-image-placeholder {
+        /* SuperSonics Section */
+        .supersonics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .supersonics-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .supersonics-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .supersonics-image-placeholder {
             width: 100%;
-            height: 150px;
+            height: 300px;
             background: var(--subtle-accent);
             border-radius: 10px;
             margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px dashed var(--accent-color);
+            border: 2px dashed var(--primary-color);
             transition: all 0.3s ease;
         }
 
-        .leadership-photo {
-            text-align: center;
-            color: var(--text-gray);
+        .supersonics-image-placeholder:hover {
+            border-color: var(--secondary-color);
+            background: rgba(255, 107, 53, 0.05);
         }
 
-        .leadership-photo span {
-            display: block;
-            font-size: 1rem;
-            color: var(--accent-color);
-            margin-bottom: 0.5rem;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid, .supersonics-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
         }
 
-        .leadership-photo p {
-            font-size: 0.8rem;
+        /* Advanced Hover Effects */
+        .morphing-card {
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
         }
 
-        .achievement-image-placeholder:hover {
-            border-color: var(--primary-color);
-            background: rgba(255, 204, 2, 0.05);
+        .morphing-card:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Glowing Elements */
+        .glow {
+            position: relative;
+        }
+
+        .glow::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            padding: 2px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .glow:hover::after {
+            opacity: 1;
         }
     </style>
 </head>
@@ -841,9 +870,12 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Professional Journey</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#supersonics">SuperSonics</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Technical Arsenal</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -892,6 +924,182 @@
         </div>
     </section>
 
+    <!-- Education Section -->
+    <section id="education">
+        <h2 class="section-title fade-in">Education</h2>
+        <div class="education-card fade-in">
+            <h3 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem;">
+                Bachelor of Computer Science
+            </h3>
+            <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">
+                <strong>Misr International University (MIU)</strong> | Cairo, Egypt
+            </p>
+            <p style="color: var(--text-gray); margin-bottom: 1rem;">
+                Graduation: June 2025
+            </p>
+            <p style="margin-bottom: 1rem;">
+                <strong>Relevant Coursework:</strong> Algorithms Analysis & Design, Object-Oriented Programming, 
+                Software Engineering, Operating Systems, Database Management Systems, Web Development, 
+                Artificial Intelligence, Data Structures
+            </p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title fade-in">Professional Journey</h2>
+        <div class="experience-timeline fade-in">
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Teaching Co-Assistant</div>
+                        <div class="experience-company">Misr International University (MIU)</div>
+                    </div>
+                    <div class="experience-date">Feb 2024 – Dec 2024</div>
+                </div>
+                <p>
+                    Co-assisted and guided students in fundamental computer science courses including Algorithms Analysis & Design, 
+                    Object-Oriented Programming, and Data Structures & Algorithms. Mentored students in C++, Java, and 
+                    advanced problem-solving techniques.
+                </p>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Software Engineering Intern</div>
+                        <div class="experience-company">Microsoft</div>
+                    </div>
+                    <div class="experience-date">Jul 2023 – Aug 2023</div>
+                </div>
+                <p>
+                    Developed a sophisticated stock market simulation game with an AI prediction assistant. 
+                    Researched and implemented Machine Learning models for market price prediction and automated trading suggestions. 
+                    Worked with cutting-edge technologies including React, Node.js, Python, and NoSQL databases.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <h2 class="section-title fade-in">Leadership & Achievements</h2>
+        <div class="achievements fade-in">
+            <div class="achievement-card">
+                <div class="achievement-image-placeholder">
+                    <div class="leadership-photo">
+                        <span>MSP Tech Club</span>
+                        <p>Add club photo or event image here</p>
+                    </div>
+                </div>
+                <h3 style="color: var(--accent-color); margin-bottom: 1rem;">MSP Tech Club - Founder & President</h3>
+                <p style="color: var(--text-gray); margin-bottom: 1rem;">Dec 2024 – Sep 2025</p>
+                <p>Leading the Microsoft Student Partners Tech Club, fostering innovation and technical excellence among students.</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-image-placeholder">
+                    <div class="leadership-photo">
+                        <span>ACPC Club</span>
+                        <p>Add competition or team photo here</p>
+                    </div>
+                </div>
+                <h3 style="color: var(--accent-color); margin-bottom: 1rem;">ACPC Club MIU - Founder & Leader</h3>
+                <p style="color: var(--text-gray); margin-bottom: 1rem;">Sep 2023 – Sep 2024</p>
+                <p>Introduced competitive programming to MIU for the first time, qualifying five teams to ECPC and 
+                earning second place in the university's Extracurricular Activities Awards.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SuperSonics Section -->
+    <section id="supersonics">
+        <h2 class="section-title fade-in">Graduation Project: SuperSonics</h2>
+        <div class="supersonics-grid fade-in">
+            <div class="supersonics-text">
+                <p>
+                    SuperSonics is my graduation project, a cutting-edge multimodal audio enhancement system that leverages 
+                    Audio Super-Resolution and Retrieval-Based Voice Conversion. I designed and implemented the entire audio 
+                    pre-processing pipeline and trained custom voice models for vocal synthesis, showcasing my expertise in 
+                    machine learning and audio processing. Built using React, Django, Python, TensorFlow, RVC, and UVR5, 
+                    this project demonstrates my ability to integrate advanced technologies to create innovative solutions.
+                </p>
+            </div>
+            <div class="supersonics-image">
+                <div class="supersonics-image-placeholder">
+                    <p>Add SuperSonics project image here</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title fade-in">Featured Projects</h2>
+        <div class="projects-grid fade-in">
+            <div class="project-card glass-card glow">
+                <h3 class="project-title">FileCrate</h3>
+                <p class="project-description">
+                    Advanced desktop application for organizing large, unstructured directories. Features automated 
+                    duplicate removal, intelligent date-based grouping, and YOLO-based image filtering for people detection. 
+                    Built with performance and scalability in mind.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Electron</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">YOLO</span>
+                    <span class="tech-tag">Chromium</span>
+                </div>
+            </div>
+            <div class="project-card glass-card glow">
+                <h3 class="project-title">Energy Consumption Predictor</h3>
+                <p class="project-description">
+                    Machine learning project implementing linear and ridge regression models to accurately predict 
+                    steel factory energy consumption. Achieved high accuracy in forecasting based on various 
+                    operational features and environmental factors.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Scikit-learn</span>
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">Data Science</span>
+                </div>
+            </div>
+            <div class="project-card glass-card glow">
+                <h3 class="project-title">Stock Market AI Predictor</h3>
+                <p class="project-description">
+                    Developed during Microsoft internship - a sophisticated stock market simulation game with integrated 
+                    AI prediction assistant. Researched and implemented machine learning models for market price prediction 
+                    and automated trading suggestions.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">NoSQL</span>
+                    <span class="tech-tag">ML</span>
+                </div>
+            </div>
+            <div class="project-card glass-card glow">
+                <h3 class="project-title">Project Placeholder 1</h3>
+                <p class="project-description">
+                    Placeholder for an upcoming project. Stay tuned for more details about this exciting development.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">TBD</span>
+                </div>
+            </div>
+            <div class="project-card glass-card glow">
+                <h3 class="project-title">Project Placeholder 2</h3>
+                <p class="project-description">
+                    Placeholder for an upcoming project. Stay tuned for more details about this exciting development.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">TBD</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills">
         <h2 class="section-title fade-in">Technical Arsenal</h2>
@@ -912,7 +1120,6 @@
                     <span class="skill-tag">React</span>
                     <span class="skill-tag">Node.js</span>
                     <span class="skill-tag">Django</span>
-                    <span class="skill-tag">TensorFlow</span>
                     <span class="skill-tag">Electron</span>
                 </div>
             </div>
@@ -939,17 +1146,234 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2 class="section-title fade-in">Featured Projects</h2>
-        <div class="projects-grid fade-in">
-            <div class="project-card glass-card glow">
-                <h3 class="project-title">SuperSonics</h3>
-                <p class="project-description">
-                    A cutting-edge multimodal audio enhancement system featuring Audio Super-Resolution and 
-                    Retrieval-Based Voice Conversion. Designed and implemented the entire audio pre-processing 
-                    pipeline and trained custom voice models for vocal synthesis.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">Django</span>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title fade-in">Let's Connect</h2>
+        <div class="contact-grid fade-in">
+            <a href="mailto:mahmoudmamdouhm3@gmail.com" class="contact-item">
+                <div class="contact-icon">📧</div>
+                <h3>Email</h3>
+                <p>mahmoudmamdouhm3@gmail.com</p>
+            </a>
+            <a href="tel:+201126312479" class="contact-item">
+                <div class="contact-icon">📱</div>
+                <h3>Phone</h3>
+                <p>+20 112 631 2479</p>
+            </a>
+            <a href="https://github.com/MahmoudMamdouh3" class="contact-item" target="_blank">
+                <div class="contact-icon">🔗</div>
+                <h3>GitHub</h3>
+                <p>MahmoudMamdouh3</p>
+            </a>
+            <a href="https://www.linkedin.com/in/mahmoudmamdouh1/" class="contact-item" target="_blank">
+                <div class="contact-icon">💼</div>
+                <h3>LinkedIn</h3>
+                <p>mahmoudmamdouh1</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Floating Action Button -->
+    <a href="#home" class="fab">↑</a>
+
+    <script>
+        // Particle System
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 35;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 8 + 15) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Scroll Animations
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in').forEach((el) => {
+                observer.observe(el);
+            });
+        }
+
+        // Smooth Scrolling
+        function initSmoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Navbar Scroll Effect
+        function initNavbarEffect() {
+            const navbar = document.getElementById('navbar');
+            let lastScrollY = window.scrollY;
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                lastScrollY = window.scrollY;
+            });
+        }
+
+        // Cursor Trail Effect
+        function initCursorTrail() {
+            const trail = [];
+            const trailLength = 20;
+            
+            for (let i = 0; i < trailLength; i++) {
+                const dot = document.createElement('div');
+                dot.style.position = 'fixed';
+                dot.style.width = '4px';
+                dot.style.height = '4px';
+                dot.style.background = `rgba(0, 255, 255, ${1 - i / trailLength})`;
+                dot.style.borderRadius = '50%';
+                dot.style.pointerEvents = 'none';
+                dot.style.zIndex = '9999';
+                dot.style.transition = 'all 0.1s ease';
+                document.body.appendChild(dot);
+                trail.push(dot);
+            }
+            
+            document.addEventListener('mousemove', (e) => {
+                trail.forEach((dot, index) => {
+                    setTimeout(() => {
+                        dot.style.left = e.clientX + 'px';
+                        dot.style.top = e.clientY + 'px';
+                    }, index * 10);
+                });
+            });
+        }
+
+        // Parallax Effect
+        function initParallax() {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const parallaxElements = document.querySelectorAll('.cyber-grid');
+                
+                parallaxElements.forEach(element => {
+                    const speed = 0.5;
+                    element.style.transform = `translateY(${scrolled * speed}px)`;
+                });
+            });
+        }
+
+        // Typing Animation for Hero
+        function initTypingAnimation() {
+            const subtitle = document.querySelector('.hero .subtitle');
+            const text = subtitle.textContent;
+            subtitle.textContent = '';
+            
+            let i = 0;
+            const typeWriter = () => {
+                if (i < text.length) {
+                    subtitle.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            };
+            
+            setTimeout(typeWriter, 2000);
+        }
+
+        // Interactive Skill Tags
+        function initSkillInteractions() {
+            document.querySelectorAll('.skill-tag').forEach(tag => {
+                tag.addEventListener('mouseenter', function() {
+                    this.style.background = `linear-gradient(45deg, ${getComputedStyle(document.documentElement).getPropertyValue('--primary-color')}, ${getComputedStyle(document.documentElement).getPropertyValue('--secondary-color')})`;
+                    this.style.transform = 'scale(1.1)';
+                });
+                
+                tag.addEventListener('mouseleave', function() {
+                    this.style.background = 'rgba(0, 255, 255, 0.1)';
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        }
+
+        // Subtle 3D Tilt Effect for Project Cards
+        function init3DTilt() {
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    
+                    const rotateX = (y - centerY) / 100;
+                    const rotateY = (centerX - x) / 100;
+                    
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(1px)`;
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
+                });
+            });
+        }
+
+        // Page Load Animation
+        function initPageLoad() {
+            document.body.style.opacity = '0';
+            window.addEventListener('load', () => {
+                document.body.style.transition = 'opacity 1s ease';
+                document.body.style.opacity = '1';
+            });
+        }
+
+        // Glitch Effect on Logo
+        function initGlitchEffect() {
+            const logo = document.querySelector('.logo');
+            const originalText = logo.textContent;
+            
+            setInterval(() => {
+                if (Math.random() > 0.95) {
+                    logo.textContent = '▓▓';
+                    setTimeout(() => {
+                        logo.textContent = originalText;
+                    }, 100);
+                }
+            }, 2000);
+        }
+
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', () => {
+            initPageLoad();
+            createParticles();
+            initScrollAnimations();
+            initSmoothScrolling();
+            initNavbarEffect();
+            initCursorTrail();
+            initParallax();
+            initTypingAnimation();
+            initSkillInteractions();
+            init3DTilt();
+            initGlitchEffect();
+        });
+    </script>
+</body>
+</html>
