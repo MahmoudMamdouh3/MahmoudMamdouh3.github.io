@@ -83,18 +83,6 @@
             box-shadow: 0 0 6px var(--primary-color);
         }
 
-        @keyframes teGradientShift {
-            0%, 100% { 
-                background-position: 0% 50%, 100% 0%, 50% 100%, 0% 0%; 
-            }
-            33% { 
-                background-position: 50% 100%, 0% 50%, 100% 0%, 0% 0%; 
-            }
-            66% { 
-                background-position: 100% 0%, 50% 100%, 0% 50%, 0% 0%; 
-            }
-        }
-
         @keyframes teFloat {
             0% {
                 transform: translateY(100vh) translateX(0px) rotate(0deg);
@@ -267,9 +255,9 @@
         }
 
         .glass-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-3px);
             border-color: var(--primary-color);
-            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
         }
 
         /* Sections */
@@ -433,9 +421,9 @@
         }
 
         .project-card:hover {
-            transform: translateY(-10px) rotateY(5deg);
+            transform: translateY(-3px);
             border-color: var(--primary-color);
-            box-shadow: 0 25px 50px rgba(0, 255, 255, 0.2);
+            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.15);
         }
 
         .project-title {
@@ -577,6 +565,21 @@
             border-radius: 15px;
             border: 1px solid var(--glass-border);
             transition: all 0.3s ease;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .contact-item h3 {
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .contact-item p {
+            color: var(--text-light);
+            word-break: break-word;
+            font-size: 1rem;
+            font-weight: 500;
         }
 
         .contact-item:hover {
@@ -634,21 +637,6 @@
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0.5rem;
-            }
-
-            .graduation-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1rem;
-            }
-
-            .graduation-badges {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-
-            .graduation-card {
-                padding: 2rem;
             }
 
             section {
@@ -740,270 +728,6 @@
             100% { transform: translate(100px, 100px); }
         }
 
-        /* Project Image Placeholders */
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .graduation-badge {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .project-image-placeholder {
-            width: 100%;
-            height: 200px;
-            background: var(--subtle-accent);
-            border-radius: 10px;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px dashed var(--primary-color);
-            transition: all 0.3s ease;
-        }
-
-        .team-photo {
-            text-align: center;
-            color: var(--text-gray);
-        }
-
-        .team-photo span {
-            display: block;
-            font-size: 1.1rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .team-photo p {
-            font-size: 0.9rem;
-        }
-
-        .project-image-placeholder:hover {
-            border-color: var(--secondary-color);
-            background: rgba(255, 107, 53, 0.05);
-        }
-
-        /* Achievement Image Placeholders */
-        .achievement-image-placeholder {
-            width: 100%;
-            height: 150px;
-            background: var(--subtle-accent);
-            border-radius: 10px;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px dashed var(--accent-color);
-            transition: all 0.3s ease;
-        }
-
-        .leadership-photo {
-            text-align: center;
-            color: var(--text-gray);
-        }
-
-        .leadership-photo span {
-            display: block;
-            font-size: 1rem;
-            color: var(--accent-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .leadership-photo p {
-            font-size: 0.8rem;
-        }
-
-        .achievement-image-placeholder:hover {
-            border-color: var(--primary-color);
-            background: rgba(255, 204, 2, 0.05);
-        }
-
-        /* Graduation Project Styles */
-        .graduation-showcase {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .graduation-card {
-            background: linear-gradient(135deg, rgba(255, 107, 53, 0.08), rgba(247, 147, 30, 0.05));
-            border: 2px solid var(--primary-color);
-            border-radius: 25px;
-            padding: 3rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .graduation-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-            background-size: 200% 200%;
-            animation: graduationGlow 4s ease-in-out infinite;
-        }
-
-        @keyframes graduationGlow {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .graduation-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-
-        .graduation-title {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-
-        .graduation-badges {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .badge {
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .badge.final-project {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-        }
-
-        .badge.team-lead {
-            background: rgba(255, 204, 2, 0.2);
-            border: 2px solid var(--accent-color);
-            color: var(--accent-color);
-        }
-
-        .graduation-image-container {
-            margin-bottom: 2rem;
-        }
-
-        .graduation-image-placeholder {
-            width: 100%;
-            height: 300px;
-            background: var(--subtle-accent);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 3px dashed var(--primary-color);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .graduation-image-placeholder:hover {
-            border-color: var(--secondary-color);
-            background: rgba(255, 107, 53, 0.08);
-            transform: scale(1.02);
-        }
-
-        .team-showcase {
-            text-align: center;
-            color: var(--text-gray);
-            padding: 2rem;
-        }
-
-        .team-showcase span {
-            display: block;
-            font-size: 1.3rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .team-showcase p {
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .team-showcase small {
-            font-size: 0.8rem;
-            opacity: 0.7;
-        }
-
-        .graduation-content {
-            position: relative;
-        }
-
-        .graduation-description {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-            color: var(--text-light);
-        }
-
-        .graduation-highlights {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: rgba(42, 42, 42, 0.5);
-            border-radius: 15px;
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .highlight-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .highlight-icon {
-            font-size: 1.5rem;
-            width: 40px;
-            text-align: center;
-        }
-
-        .graduation-tech h4 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .tech-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-        }
-
-        .tech-tag.featured {
-            background: rgba(255, 107, 53, 0.15);
-            border: 2px solid var(--primary-color);
-            padding: 0.6rem 1.2rem;
-            font-weight: bold;
-        }
-
-        .tech-tag.featured:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: scale(1.08);
-        }
-
         /* Education Highlight */
         .education-card {
             background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
@@ -1067,6 +791,40 @@
             transform: scale(1.05);
             box-shadow: 0 20px 40px rgba(255, 255, 0, 0.2);
         }
+
+        .achievement-image-placeholder {
+            width: 100%;
+            height: 150px;
+            background: var(--subtle-accent);
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed var(--accent-color);
+            transition: all 0.3s ease;
+        }
+
+        .leadership-photo {
+            text-align: center;
+            color: var(--text-gray);
+        }
+
+        .leadership-photo span {
+            display: block;
+            font-size: 1rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .leadership-photo p {
+            font-size: 0.8rem;
+        }
+
+        .achievement-image-placeholder:hover {
+            border-color: var(--primary-color);
+            background: rgba(255, 204, 2, 0.05);
+        }
     </style>
 </head>
 <body>
@@ -1085,7 +843,6 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#graduation-project">Graduation Project</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -1196,515 +953,3 @@
                 <div class="project-tech">
                     <span class="tech-tag">React</span>
                     <span class="tech-tag">Django</span>
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">NoSQL</span>
-                    <span class="tech-tag">ML</span>
-                </div>
-            </div>
-            
-            <div class="project-card glass-card glow">
-                <h3 class="project-title">Energy Consumption Predictor</h3>
-                <p class="project-description">
-                    Machine learning project implementing linear and ridge regression models to accurately predict 
-                    steel factory energy consumption. Achieved high accuracy in forecasting based on various 
-                    operational features and environmental factors.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Scikit-learn</span>
-                    <span class="tech-tag">PyTorch</span>
-                    <span class="tech-tag">Data Science</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2 class="section-title fade-in">Professional Journey</h2>
-        <div class="experience-timeline fade-in">
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <div class="experience-title">Teaching Co-Assistant</div>
-                        <div class="experience-company">Misr International University (MIU)</div>
-                    </div>
-                    <div class="experience-date">Feb 2024 – Dec 2024</div>
-                </div>
-                <p>
-                    Co-assisted and guided students in fundamental computer science courses including Algorithms Analysis & Design, 
-                    Object Oriented Programming, and Data Structures & Algorithms. Mentored students in C++, Java, and 
-                    advanced problem-solving techniques.
-                </p>
-            </div>
-            
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <div class="experience-title">Software Engineering Intern</div>
-                        <div class="experience-company">Microsoft</div>
-                    </div>
-                    <div class="experience-date">Jul 2023 – Aug 2023</div>
-                </div>
-                <p>
-                    Developed a sophisticated stock market simulation game with an AI prediction assistant. 
-                    Researched and implemented Machine Learning models for market price prediction and automated trading suggestions. 
-                    Worked with cutting-edge technologies including React, Node.js, Python, and NoSQL databases.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-        <h2 class="section-title fade-in">Education</h2>
-        <div class="education-card fade-in">
-            <h3 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem;">
-                Bachelor of Computer Science
-            </h3>
-            <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">
-                <strong>Misr International University (MIU)</strong> | Cairo, Egypt
-            </p>
-            <p style="color: var(--text-gray); margin-bottom: 1rem;">
-                Graduation: June 2025
-            </p>
-            <p style="margin-bottom: 1rem;">
-                <strong>Relevant Coursework:</strong> Algorithms Analysis & Design, Object-Oriented Programming, 
-                Software Engineering, Operating Systems, Database Management Systems, Web Development, 
-                Artificial Intelligence, Data Structures
-            </p>
-        </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements">
-        <h2 class="section-title fade-in">Leadership & Achievements</h2>
-        <div class="achievements fade-in">
-            <div class="achievement-card">
-                <div class="achievement-image-placeholder">
-                    <div class="leadership-photo">
-                        <span>MSP Tech Club</span>
-                        <p>Add club photo or event image here</p>
-                    </div>
-                </div>
-                <h3 style="color: var(--accent-color); margin-bottom: 1rem;">MSP Tech Club - Founder & President</h3>
-                <p style="color: var(--text-gray); margin-bottom: 1rem;">Dec 2024 – Sep 2025</p>
-                <p>Leading the Microsoft Student Partners Tech Club, fostering innovation and technical excellence among students.</p>
-            </div>
-            
-            <div class="achievement-card">
-                <div class="achievement-image-placeholder">
-                    <div class="leadership-photo">
-                        <span>ACPC Club</span>
-                        <p>Add competition or team photo here</p>
-                    </div>
-                </div>
-                <h3 style="color: var(--accent-color); margin-bottom: 1rem;">ACPC Club MIU - Founder & Leader</h3>
-                <p style="color: var(--text-gray); margin-bottom: 1rem;">Sep 2023 – Sep 2024</p>
-                <p>Introduced competitive programming to MIU for the first time, qualifying five teams to ECPC and 
-                earning second place in the university's Extracurricular Activities Awards.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2 class="section-title fade-in">Let's Connect</h2>
-        <div class="contact-grid fade-in">
-            <a href="mailto:mahmoudmamdouhm3@gmail.com" class="contact-item">
-                <div class="contact-icon">📧</div>
-                <h3>Email</h3>
-                <p>mahmoudmamdouhm3@gmail.com</p>
-            </a>
-            
-            <a href="tel:+201126312479" class="contact-item">
-                <div class="contact-icon">📱</div>
-                <h3>Phone</h3>
-                <p>+20 112 631 2479</p>
-            </a>
-            
-            <a href="https://github.com/MahmoudMamdouh1" class="contact-item" target="_blank">
-                <div class="contact-icon">🔗</div>
-                <h3>GitHub</h3>
-                <p>MahmoudMamdouh1</p>
-            </a>
-            
-            <a href="https://linkedin.com/in/MahmoudMamdouh3" class="contact-item" target="_blank">
-                <div class="contact-icon">💼</div>
-                <h3>LinkedIn</h3>
-                <p>MahmoudMamdouh3</p>
-            </a>
-        </div>
-    </section>
-
-    <!-- Floating Action Button -->
-    <a href="#home" class="fab">↑</a>
-
-    <script>
-        // Particle System - Clean TE Style
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 35;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                particle.style.animationDuration = (Math.random() * 8 + 15) + 's';
-                particlesContainer.appendChild(particle);
-            }
-        }
-
-        // Matrix Rain Effect
-        function initMatrix() {
-            const canvas = document.getElementById('matrix');
-            const ctx = canvas.getContext('2d');
-            
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            
-            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()';
-            const charArray = chars.split('');
-            const fontSize = 14;
-            const columns = canvas.width / fontSize;
-            const drops = [];
-            
-            for (let i = 0; i < columns; i++) {
-                drops[i] = 1;
-            }
-            
-            function draw() {
-                ctx.fillStyle = 'rgba(10, 10, 10, 0.04)';
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-                
-                ctx.fillStyle = '#00ffff';
-                ctx.font = fontSize + 'px monospace';
-                
-                for (let i = 0; i < drops.length; i++) {
-                    const text = charArray[Math.floor(Math.random() * charArray.length)];
-                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-                    
-                    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                        drops[i] = 0;
-                    }
-                    drops[i]++;
-                }
-            }
-            
-            setInterval(draw, 100);
-        }
-
-        // Scroll Animations
-        function initScrollAnimations() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.fade-in').forEach((el) => {
-                observer.observe(el);
-            });
-        }
-
-        // Smooth Scrolling
-        function initSmoothScrolling() {
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        }
-
-        // Navbar Scroll Effect
-        function initNavbarEffect() {
-            const navbar = document.getElementById('navbar');
-            let lastScrollY = window.scrollY;
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 100) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-                lastScrollY = window.scrollY;
-            });
-        }
-
-        // Cursor Trail Effect
-        function initCursorTrail() {
-            const trail = [];
-            const trailLength = 20;
-            
-            for (let i = 0; i < trailLength; i++) {
-                const dot = document.createElement('div');
-                dot.style.position = 'fixed';
-                dot.style.width = '4px';
-                dot.style.height = '4px';
-                dot.style.background = `rgba(0, 255, 255, ${1 - i / trailLength})`;
-                dot.style.borderRadius = '50%';
-                dot.style.pointerEvents = 'none';
-                dot.style.zIndex = '9999';
-                dot.style.transition = 'all 0.1s ease';
-                document.body.appendChild(dot);
-                trail.push(dot);
-            }
-            
-            document.addEventListener('mousemove', (e) => {
-                trail.forEach((dot, index) => {
-                    setTimeout(() => {
-                        dot.style.left = e.clientX + 'px';
-                        dot.style.top = e.clientY + 'px';
-                    }, index * 10);
-                });
-            });
-        }
-
-        // Parallax Effect
-        function initParallax() {
-            window.addEventListener('scroll', () => {
-                const scrolled = window.pageYOffset;
-                const parallaxElements = document.querySelectorAll('.cyber-grid');
-                
-                parallaxElements.forEach(element => {
-                    const speed = 0.5;
-                    element.style.transform = `translateY(${scrolled * speed}px)`;
-                });
-            });
-        }
-
-        // Typing Animation for Hero
-        function initTypingAnimation() {
-            const subtitle = document.querySelector('.hero .subtitle');
-            const text = subtitle.textContent;
-            subtitle.textContent = '';
-            
-            let i = 0;
-            const typeWriter = () => {
-                if (i < text.length) {
-                    subtitle.textContent += text.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, 100);
-                }
-            };
-            
-            setTimeout(typeWriter, 2000);
-        }
-
-        // Interactive Skill Tags
-        function initSkillInteractions() {
-            document.querySelectorAll('.skill-tag').forEach(tag => {
-                tag.addEventListener('mouseenter', function() {
-                    this.style.background = `linear-gradient(45deg, ${getComputedStyle(document.documentElement).getPropertyValue('--primary-color')}, ${getComputedStyle(document.documentElement).getPropertyValue('--secondary-color')})`;
-                    this.style.transform = 'scale(1.1) rotate(2deg)';
-                });
-                
-                tag.addEventListener('mouseleave', function() {
-                    this.style.background = 'rgba(0, 255, 255, 0.1)';
-                    this.style.transform = 'scale(1) rotate(0deg)';
-                });
-            });
-        }
-
-        // 3D Tilt Effect for Project Cards
-        function init3DTilt() {
-            document.querySelectorAll('.project-card').forEach(card => {
-                card.addEventListener('mousemove', (e) => {
-                    const rect = card.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-                    
-                    const centerX = rect.width / 2;
-                    const centerY = rect.height / 2;
-                    
-                    const rotateX = (y - centerY) / 10;
-                    const rotateY = (centerX - x) / 10;
-                    
-                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
-                });
-                
-                card.addEventListener('mouseleave', () => {
-                    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
-                });
-            });
-        }
-
-        // Dynamic Color Changing - Teenage Engineering Inspired
-        function initDynamicColors() {
-            const colors = [
-                ['#ff6b35', '#f7931e', '#ffcc02'], // Orange theme
-                ['#e74c3c', '#f39c12', '#f1c40f'], // Warm theme
-                ['#3498db', '#2980b9', '#1abc9c'], // Cool theme
-                ['#9b59b6', '#8e44ad', '#e91e63']  // Purple theme
-            ];
-            
-            let currentColorSet = 0;
-            
-            setInterval(() => {
-                currentColorSet = (currentColorSet + 1) % colors.length;
-                const [primary, secondary, accent] = colors[currentColorSet];
-                
-                document.documentElement.style.setProperty('--primary-color', primary);
-                document.documentElement.style.setProperty('--secondary-color', secondary);
-                document.documentElement.style.setProperty('--accent-color', accent);
-            }, 15000); // Slower, more subtle transitions
-        }
-
-        // Glitch Effect on Logo
-        function initGlitchEffect() {
-            const logo = document.querySelector('.logo');
-            const originalText = logo.textContent;
-            
-            setInterval(() => {
-                if (Math.random() > 0.95) {
-                    logo.textContent = '▓▓';
-                    setTimeout(() => {
-                        logo.textContent = originalText;
-                    }, 100);
-                }
-            }, 2000);
-        }
-
-        // Page Load Animation
-        function initPageLoad() {
-            document.body.style.opacity = '0';
-            window.addEventListener('load', () => {
-                document.body.style.transition = 'opacity 1s ease';
-                document.body.style.opacity = '1';
-            });
-        }
-
-        // Audio Visualization (Visual Only)
-        function initAudioVisualization() {
-            const canvas = document.createElement('canvas');
-            canvas.style.position = 'fixed';
-            canvas.style.top = '0';
-            canvas.style.left = '0';
-            canvas.style.width = '100%';
-            canvas.style.height = '100%';
-            canvas.style.zIndex = '-1';
-            canvas.style.opacity = '0.1';
-            canvas.style.pointerEvents = 'none';
-            document.body.appendChild(canvas);
-            
-            const ctx = canvas.getContext('2d');
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            
-            const bars = 100;
-            const barWidth = canvas.width / bars;
-            
-            function drawVisualization() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
-                for (let i = 0; i < bars; i++) {
-                    const barHeight = Math.random() * canvas.height * 0.5;
-                    const hue = (i / bars) * 360;
-                    
-                    ctx.fillStyle = `hsla(${hue}, 100%, 50%, 0.8)`;
-                    ctx.fillRect(i * barWidth, canvas.height - barHeight, barWidth - 2, barHeight);
-                }
-                
-                requestAnimationFrame(drawVisualization);
-            }
-            
-            drawVisualization();
-        }
-
-        // Initialize everything
-        document.addEventListener('DOMContentLoaded', () => {
-            initPageLoad();
-            createParticles();
-            initScrollAnimations();
-            initSmoothScrolling();
-            initNavbarEffect();
-            initCursorTrail();
-            initParallax();
-            initTypingAnimation();
-            initSkillInteractions();
-            init3DTilt();
-            initDynamicColors();
-            initGlitchEffect();
-        });
-
-        // Resize handling
-        window.addEventListener('resize', () => {
-            const canvas = document.getElementById('matrix');
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-
-        // Easter Egg - Konami Code
-        const konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
-        let konamiIndex = 0;
-        
-        document.addEventListener('keydown', (e) => {
-            if (e.keyCode === konamiCode[konamiIndex]) {
-                konamiIndex++;
-                if (konamiIndex === konamiCode.length) {
-                    document.body.style.animation = 'rainbow 1s infinite';
-                    setTimeout(() => {
-                        document.body.style.animation = '';
-                    }, 5000);
-                    konamiIndex = 0;
-                }
-            } else {
-                konamiIndex = 0;
-            }
-        });
-
-        // Rainbow animation for easter egg
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes rainbow {
-                0% { filter: hue-rotate(0deg); }
-                100% { filter: hue-rotate(360deg); }
-            }
-        `;
-        document.head.appendChild(style);
-    </script>
-</body>
-</html>
-                    <span class="tech-tag">TensorFlow</span>
-                    <span class="tech-tag">RVC</span>
-                    <span class="tech-tag">UVR5</span>
-                </div>
-            </div>
-            
-            <div class="project-card glass-card glow">
-                <h3 class="project-title">FileCrate</h3>
-                <p class="project-description">
-                    Advanced desktop application for organizing large, unstructured directories. Features automated 
-                    duplicate removal, intelligent date-based grouping, and YOLO-based image filtering for people detection. 
-                    Built with performance and scalability in mind.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">Electron</span>
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">YOLO</span>
-                    <span class="tech-tag">Chromium</span>
-                </div>
-            </div>
-            
-            <div class="project-card glass-card glow">
-                <h3 class="project-title">Stock Market AI Predictor</h3>
-                <p class="project-description">
-                    Developed during Microsoft internship - a sophisticated stock market simulation game with integrated 
-                    AI prediction assistant. Researched and implemented machine learning models for market price prediction 
-                    and automated trading suggestions.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">Python</span>
