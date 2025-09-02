@@ -303,10 +303,11 @@
 
         .about-image img {
             width: 100%;
-            max-width: 300px;
-            height: 300px;
+            max-width: 400px;
+            height: 400px;
             border-radius: 50%;
-            object-fit: cover;
+            object-fit: contain;
+            background: var(--subtle-accent);
             display: block;
             margin: 0 auto;
         }
@@ -622,7 +623,7 @@
         /* Project Image Placeholders */
         .project-image-placeholder {
             width: 100%;
-            height: 200px;
+            height: 300px;
             background: var(--subtle-accent);
             border-radius: 10px;
             margin-bottom: 1.5rem;
@@ -641,32 +642,17 @@
         /* Achievement Image Placeholders */
         .achievement-image-placeholder {
             width: 100%;
-            height: 150px;
+            height: 250px;
             margin-bottom: 1.5rem;
         }
 
         .achievement-image-placeholder img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            background: var(--subtle-accent);
             border-radius: 10px;
             display: block;
-        }
-
-        .leadership-photo {
-            text-align: center;
-            color: var(--text-gray);
-        }
-
-        .leadership-photo span {
-            display: block;
-            font-size: 1rem;
-            color: var(--accent-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .leadership-photo p {
-            font-size: 0.8rem;
         }
 
         .achievement-image-placeholder:hover img {
@@ -758,8 +744,9 @@
         .supersonics-image img {
             width: 100%;
             max-width: 600px;
-            height: 300px;
-            object-fit: cover;
+            height: 400px;
+            object-fit: contain;
+            background: var(--subtle-accent);
             border-radius: 10px;
             display: block;
             margin: 0 auto;
@@ -768,7 +755,7 @@
         .supersonics-image-placeholder {
             width: 100%;
             max-width: 600px;
-            height: 300px;
+            height: 400px;
             background: var(--subtle-accent);
             border-radius: 10px;
             margin-bottom: 1.5rem;
@@ -800,12 +787,16 @@
             }
 
             .about-image img {
-                max-width: 200px;
-                height: 200px;
+                max-width: 250px;
+                height: 250px;
             }
 
             .supersonics-image img {
                 max-width: 100%;
+                height: 250px;
+            }
+
+            .achievement-image-placeholder {
                 height: 200px;
             }
 
