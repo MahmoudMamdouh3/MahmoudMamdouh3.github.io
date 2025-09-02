@@ -301,36 +301,14 @@
             text-align: center;
         }
 
-        .profile-placeholder {
-            width: 300px;
+        .about-image img {
+            width: 100%;
+            max-width: 300px;
             height: 300px;
             border-radius: 50%;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            object-fit: cover;
+            display: block;
             margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            font-weight: bold;
-            color: var(--bg-dark);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .profile-placeholder::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            animation: shimmer 3s linear infinite;
-        }
-
-        @keyframes shimmer {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
         }
 
         /* Skills Section */
@@ -664,14 +642,15 @@
         .achievement-image-placeholder {
             width: 100%;
             height: 150px;
-            background: var(--subtle-accent);
-            border-radius: 10px;
             margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px dashed var(--accent-color);
-            transition: all 0.3s ease;
+        }
+
+        .achievement-image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
         }
 
         .leadership-photo {
@@ -690,9 +669,8 @@
             font-size: 0.8rem;
         }
 
-        .achievement-image-placeholder:hover {
-            border-color: var(--primary-color);
-            background: rgba(255, 204, 2, 0.05);
+        .achievement-image-placeholder:hover img {
+            border: 2px solid var(--primary-color);
         }
 
         /* Education Card */
@@ -777,8 +755,19 @@
             text-align: center;
         }
 
+        .supersonics-image img {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+
         .supersonics-image-placeholder {
             width: 100%;
+            max-width: 600px;
             height: 300px;
             background: var(--subtle-accent);
             border-radius: 10px;
@@ -808,6 +797,16 @@
             .about-grid, .supersonics-grid {
                 grid-template-columns: 1fr;
                 text-align: center;
+            }
+
+            .about-image img {
+                max-width: 200px;
+                height: 200px;
+            }
+
+            .supersonics-image img {
+                max-width: 100%;
+                height: 200px;
             }
 
             .experience-header {
@@ -919,7 +918,7 @@
                 </p>
             </div>
             <div class="about-image">
-                <div class="profile-placeholder">MM</div>
+                <img src="/images/profile-photo.png" alt="Mahmoud Mamdouh Profile" loading="lazy">
             </div>
         </div>
     </section>
@@ -986,10 +985,7 @@
         <div class="achievements fade-in">
             <div class="achievement-card">
                 <div class="achievement-image-placeholder">
-                    <div class="leadership-photo">
-                        <span>MSP Tech Club</span>
-                        <p>Add club photo or event image here</p>
-                    </div>
+                    <img src="/images/msp-tech-club.png" alt="MSP Tech Club Event" loading="lazy">
                 </div>
                 <h3 style="color: var(--accent-color); margin-bottom: 1rem;">MSP Tech Club - Founder & President</h3>
                 <p style="color: var(--text-gray); margin-bottom: 1rem;">Dec 2024 – Sep 2025</p>
@@ -997,10 +993,7 @@
             </div>
             <div class="achievement-card">
                 <div class="achievement-image-placeholder">
-                    <div class="leadership-photo">
-                        <span>ACPC Club</span>
-                        <p>Add competition or team photo here</p>
-                    </div>
+                    <img src="/images/acpc-club.jpg" alt="ACPC Club Competition" loading="lazy">
                 </div>
                 <h3 style="color: var(--accent-color); margin-bottom: 1rem;">ACPC Club MIU - Founder & Leader</h3>
                 <p style="color: var(--text-gray); margin-bottom: 1rem;">Sep 2023 – Sep 2024</p>
@@ -1024,9 +1017,7 @@
                 </p>
             </div>
             <div class="supersonics-image">
-                <div class="supersonics-image-placeholder">
-                    <p>Add SuperSonics project image here</p>
-                </div>
+                <img src="/images/supersonics-project.jpg" alt="SuperSonics Project" loading="lazy">
             </div>
         </div>
     </section>
