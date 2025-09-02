@@ -1,97 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mahmoud Mamdouh | Portfolio</title>
-  <style>
-    /* Reset & Fonts */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; background: #f5f7fa; color: #333; }
-
-    /* Header */
-    header { background: linear-gradient(135deg, #1d3557, #457b9d); color: white; padding: 60px 20px; text-align: center; }
-    header h1 { font-size: 2.8rem; margin-bottom: 10px; }
-    header p { font-size: 1.2rem; opacity: 0.9; }
-
-    /* Navigation */
-    nav { background: #1d3557; display: flex; justify-content: center; padding: 15px; position: sticky; top: 0; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; transition: color 0.3s; }
-    nav a:hover { color: #f1faee; }
-
-    /* Sections */
-    section { max-width: 1000px; margin: 50px auto; padding: 0 20px; }
-    h2 { margin-bottom: 20px; color: #1d3557; border-left: 5px solid #457b9d; padding-left: 10px; }
-
-    /* About */
-    #about p { font-size: 1.1rem; }
-
-    /* Projects */
-    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .project-card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: transform 0.2s; }
-    .project-card:hover { transform: translateY(-5px); }
-    .project-card h3 { margin-bottom: 10px; color: #457b9d; }
-
-    /* Contact */
-    #contact a { color: #1d3557; text-decoration: none; font-weight: bold; }
-    #contact a:hover { text-decoration: underline; }
-
-    /* Footer */
-    footer { background: #1d3557; color: white; text-align: center; padding: 20px; margin-top: 50px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmoud Mamdouh | Game Dev Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e); /* Gaming-inspired dark gradient */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #00ffcc; /* Neon accent */
+            animation: fadeIn 2s ease-in;
+        }
+        h2 {
+            font-size: 2em;
+            color: #ffcc00;
+        }
+        section {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+        }
+        .project {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #00ffcc;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px #00ffcc;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        a {
+            color: #00ffcc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            section { padding: 10px; }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Mahmoud Mamdouh</h1>
+        <p>Aspiring Game Programmer • CUDA & oneAPI Enthusiast • Audio & Image Processing Innovator</p>
+    </header>
 
-  <!-- Hero -->
-  <header>
-    <h1>Mahmoud Mamdouh</h1>
-    <p>Computer Science Student • CUDA & oneAPI Enthusiast • Audio & Image Processing Researcher</p>
-  </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I’m Mahmoud 👋 – a fresh Computer Science graduate passionate about crafting immersive games and solving complex problems with creative tech. From building AI-driven stock market simulation games at Microsoft to founding tech clubs that sharpen problem-solving skills, I thrive on turning ideas into interactive experiences. My background in C++, Java, React, and ML equips me to optimize game logic, audio, and visuals. Eager to dive into game dev scholarships or roles where I can innovate 🚀.</p>
+    </section>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>🎮 Stock Market Simulation Game (Microsoft Internship)</h3>
+            <img src="images/stock-game-ui.png" alt="Screenshot of the stock market game UI with AI predictions and interactive charts">
+            <p>Developed a dynamic simulation game with AI assistants predicting stock prices and suggesting actions. Built with HTML, CSS, JS, NodeJS, React, Python, and No-SQL. Researched ML models for realistic gameplay – perfect for honing game mechanics and user engagement.</p>
+            <a href="https://github.com/MahmoudMamdouh3/stock-game-repo">View Repo/Demo</a> <!-- Replace with actual link -->
+        </div>
+        <div class="project">
+            <h3>🎵 SuperSonics: Multimodal Audio Enhancement System</h3>
+            <img src="images/supersonics-waveform.jpg" alt="Audio waveform before/after enhancement, showing noise removal and voice conversion">
+            <p>A creative tool for super-resolving audio and converting voices using Retrieval-Based Voice Conversion. Designed the pre-processing pipeline and trained models with React, Django, Python, TensorFlow, RVC, UVR5. Ideal for game audio design, like real-time sound effects or character voices.</p>
+            <a href="https://github.com/MahmoudMamdouh3/SuperSonics">View Repo/Demo</a> <!-- Replace with actual link -->
+        </div>
+        <div class="project">
+            <h3>🖼 FileCrate: Smart File Organizer</h3>
+            <img src="images/filecrate-screenshot.png" alt="Desktop app interface showing file grouping, duplicate removal, and YOLO-based image filtering">
+            <p>An intuitive desktop app that automates file management with duplicate removal, date grouping, and YOLO-powered image filtering (e.g., detecting people). Focused on performance and modularity using Electron JS, HTML, CSS, JS, Bash. Relates to game dev through efficient asset management for textures/models.</p>
+            <a href="https://github.com/MahmoudMamdouh3/FileCrate">View Repo/Demo</a> <!-- Replace with actual link -->
+        </div>
+        <!-- Add more projects like Energy Prediction if space allows -->
+    </section>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi, I’m Mahmoud 👋. I love solving tough problems with parallel programming, CUDA, and Intel oneAPI. My current research is about enhancing audio and images using cutting-edge techniques like super-resolution and deepfake analysis. I enjoy building projects that push technology forward 🚀.</p>
-  </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>C++ • Java • JavaScript • React • NodeJS</li>
+            <li>Data Structures & Algorithms • Problem Solving • ML (PyTorch, Sci-kit-learn)</li>
+            <li>Game-Relevant: Audio/Image Processing • AI Predictions • Optimization (CUDA, oneAPI)</li>
+        </ul>
+    </section>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>🎵 Audio Enhancement</h3>
-        <p>Accelerating noise removal with CUDA & oneAPI for real-time performance.</p>
-      </div>
-      <div class="project-card">
-        <h3>🧠 Deepfake Audio Research</h3>
-        <p>Exploring advanced detection & generation techniques in ultra-realistic audio synthesis.</p>
-      </div>
-      <div class="project-card">
-        <h3>🖼 Image Super-Resolution</h3>
-        <p>Combining classical ML and advanced AI approaches to upscale images with high fidelity.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:mahmoud@example.com">mahmoud@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/MahmoudMamdouh3">github.com/MahmoudMamdouh3</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Mahmoud Mamdouh. Built with ❤️ on GitHub Pages.</p>
-  </footer>
-
+    <section id="contact">
+        <h2>Contact</h2>
+        <ul>
+            <li>Email: <a href="mailto:mahmoudmamdouhm3@gmail.com">mahmoudmamdouhm3@gmail.com</a></li>
+            <li>GitHub: <a href="https://github.com/MahmoudMamdouh3">github.com/MahmoudMamdouh3</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/mahmoud-mamdouh-/">linkedin.com/in/mahmoud-mamdouh-</a> <!-- Replace with your real URL --></li>
+            <li>Resume: <a href="Mahmoud-Mamdouh-FlowCV-Resume-20250902.pdf">Download PDF</a> <!-- Upload your resume to the repo and link it --></li>
+        </ul>
+    </section>
 </body>
 </html>
